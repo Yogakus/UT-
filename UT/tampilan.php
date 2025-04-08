@@ -9,8 +9,7 @@
 <body>
     <div class="container mt-5">
         <h2>Tampilan Keseluruhan</h2>
-        
-        <!-- Search Form -->
+ 
         <form method="GET" class="mb-3">
             <div class="row">
                 <div class="col-md-4">
@@ -47,8 +46,6 @@
             </div>
             <button type="submit" class="btn btn-primary mt-3">Cari</button>
         </form>
-
-        <!-- Data Table -->
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -69,7 +66,6 @@
                           JOIN sales s ON l.id_sales = s.id_sales 
                           JOIN produk p ON l.id_produk = p.id_produk";
                 
-                // Apply filters if set
                 $conditions = [];
                 if (!empty($_GET['bulan'])) {
                     $bulan = $_GET['bulan'];
